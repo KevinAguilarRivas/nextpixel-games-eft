@@ -71,8 +71,9 @@ Otros comandos disponibles:
 | `npm run test:navegadores` | Ejecuta las pruebas automatizadas en Chrome y Edge (requiere `npm run build` antes) |
 | `npm run deploy` | Compila y publica el sitio en GitHub Pages |
 
-> Si se abre desde el `.zip` entregado, basta con descomprimirlo y ejecutar los pasos 2 y 3 dentro de la carpeta
-> `nextpixel-games-eft`.
+> **Desde el `.zip` entregado** (`Kevin_Aguilar_PFY2201_EFT_FRONT_END_I.zip`): descomprimirlo, abrir una terminal
+> dentro de la carpeta descomprimida y ejecutar los pasos 2 y 3. La carpeta `node_modules` no se incluye en el
+> `.zip` porque `npm install` la vuelve a generar. También se incluye `dist/`, la versión ya compilada.
 
 ## Cómo usar el sitio
 
