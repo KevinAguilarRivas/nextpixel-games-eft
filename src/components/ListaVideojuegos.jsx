@@ -46,8 +46,8 @@ function ListaVideojuegos({ videojuegos, categorias, cargando, error, onReintent
         Mostrando {videojuegos.length} {videojuegos.length === 1 ? 'videojuego' : 'videojuegos'}
       </p>
 
-      {/* Grilla responsiva de Bootstrap: 1 columna en móvil, 2 en tablet, 3–4 en escritorio */}
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      {/* Grilla responsiva de Bootstrap: 1 columna en móvil, 2–3 en tablet, 4 en escritorio */}
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
         {videojuegos.map((juego) => (
           <div className="col" key={juego.id}>
             <TarjetaVideojuego

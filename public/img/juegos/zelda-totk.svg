@@ -5,7 +5,5 @@
 <g opacity=".08" stroke="#fff"><line x1="-200" y1="0" x2="300" y2="500"/><line x1="-160" y1="0" x2="340" y2="500"/><line x1="-120" y1="0" x2="380" y2="500"/><line x1="-80" y1="0" x2="420" y2="500"/><line x1="-40" y1="0" x2="460" y2="500"/><line x1="0" y1="0" x2="500" y2="500"/><line x1="40" y1="0" x2="540" y2="500"/><line x1="80" y1="0" x2="580" y2="500"/><line x1="120" y1="0" x2="620" y2="500"/><line x1="160" y1="0" x2="660" y2="500"/><line x1="200" y1="0" x2="700" y2="500"/><line x1="240" y1="0" x2="740" y2="500"/></g>
 <polygon points="200,90 250,180 150,180" fill="#fde047" opacity=".9"/><polygon points="150,180 200,270 100,270" fill="#fde047" opacity=".9"/><polygon points="250,180 300,270 200,270" fill="#fde047" opacity=".9"/>
 <rect width="400" height="500" fill="url(#s)"/>
-<rect x="20" y="20" width="112" height="28" rx="14" fill="#000" opacity=".45"/>
-<text x="32" y="39" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff" letter-spacing="1.5">AVENTURA</text>
 <text x="200" y="370" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">ZELDA</text><text x="200" y="414" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="30" fill="#ffffff" letter-spacing="1">TEARS OF THE</text><text x="200" y="458" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">KINGDOM</text>
 </svg>

@@ -426,6 +426,50 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 
 @media (max-width: 575.98px) {
+  /* En móvil la tarjeta pasa a formato horizontal con CSS Grid:
+     portada a la izquierda, información y acciones a la derecha */
+  .game-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .game-cover {
+    grid-row: 1 / span 2;
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .game-badge {
+    top: auto;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: auto;
+    font-size: 0.7rem;
+  }
+
+  .game-card .card-body {
+    padding: 0.85rem 1rem 0.5rem;
+  }
+
+  .game-card .card-text {
+    font-size: 0.95rem;
+  }
+
+  .game-price {
+    font-size: 1.1rem;
+  }
+
+  .game-actions {
+    padding: 0.5rem 1rem 0.85rem;
+    border-top: 0;
+    min-height: 0;
+  }
+
+  .game-card:hover {
+    transform: none;
+  }
+
   .hero {
     padding: 3rem 0;
   }
