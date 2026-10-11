@@ -27,7 +27,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5 · Xbox · PC',
     precio: 39990,
     descripcion: 'Explora las Tierras Intermedias en un mundo abierto lleno de jefes desafiantes y secretos.',
-    imagen: 'img/juegos/elden-ring.jpg',
+    imagen: 'img/juegos/elden-ring.avif',
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5 · Xbox · PC · Switch',
     precio: 19990,
     descripcion: 'Edición completa con todas las expansiones: sigue a Geralt en la búsqueda de Ciri.',
-    imagen: 'img/juegos/the-witcher-3.jpg',
+    imagen: 'img/juegos/the-witcher-3.avif',
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5 · PC',
     precio: 54990,
     descripcion: 'Kratos y Atreus recorren los nueve reinos en el desenlace de la saga nórdica.',
-    imagen: 'img/juegos/god-of-war-ragnarok.jpg',
+    imagen: 'img/juegos/god-of-war-ragnarok.jpeg',
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5',
     precio: 59990,
     descripcion: 'Peter Parker y Miles Morales unen fuerzas contra Venom en una Nueva York más grande.',
-    imagen: 'img/juegos/spider-man-2.jpg',
+    imagen: 'img/juegos/spider-man-2.avif',
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'Nintendo Switch',
     precio: 59990,
     descripcion: 'Link explora el cielo, la superficie y las profundidades de Hyrule construyendo sus propias máquinas.',
-    imagen: 'img/juegos/zelda-totk.jpg',
+    imagen: 'img/juegos/zelda-totk.avif',
   },
   {
     id: 7,
@@ -99,7 +99,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5 · Xbox · PC',
     precio: 59990,
     descripcion: 'Básquetbol con jugabilidad renovada, MyCAREER y las plantillas oficiales de la NBA.',
-    imagen: 'img/juegos/nba-2k26.jpg',
+    imagen: 'img/juegos/nba-2k26.webp',
   },
   {
     id: 10,
@@ -108,7 +108,7 @@ export const VIDEOJUEGOS = [
     plataforma: 'PS5 · Xbox · PC',
     precio: 39990,
     descripcion: 'Festival de carreras en mundo abierto por los paisajes de México con cientos de autos.',
-    imagen: 'img/juegos/forza-horizon-5.jpg',
+    imagen: 'img/juegos/forza-horizon-5.avif',
   },
   {
     id: 11,
@@ -126,6 +126,6 @@ export const VIDEOJUEGOS = [
     plataforma: 'PC · Xbox',
     precio: 29990,
     descripcion: 'Estrategia en tiempo real: lidera civilizaciones históricas en batallas épicas.',
-    imagen: 'img/juegos/age-of-empires-4.jpg',
+    imagen: 'img/juegos/age-of-empires-4.avif',
   },
 ];

@@ -78,7 +78,7 @@ Otros comandos disponibles:
 ### Imágenes de los videojuegos
 
 Cada juego tiene en `src/data/videojuegos.js` un campo `imagen` con la ruta de su portada, por ejemplo
-`img/juegos/elden-ring.jpg`. Basta con copiar la imagen en `public/img/juegos/` con ese nombre
+`img/juegos/elden-ring.avif`. Basta con copiar la imagen en `public/img/juegos/` con ese nombre
 (la lista completa está en `public/img/juegos/LEEME.txt`). Se recomienda formato vertical 4:5 (ej: 400 × 500 px).
 
 Si la imagen todavía no existe, la tarjeta muestra el espacio de la portada vacío (la tarjeta detecta el error de
