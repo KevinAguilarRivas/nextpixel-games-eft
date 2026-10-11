@@ -61,6 +61,11 @@ async function correr(channel, conCapturas) {
   await page.evaluate(() => window.scrollTo(0, document.getElementById('catalogo').offsetTop - 70));
   await sleep(300);
   await shot(page, '03-catalogo-tarjetas');
+  // Evidencia de compatibilidad: el mismo catálogo en Microsoft Edge
+  if (channel === 'msedge') {
+    await page.evaluate(() => Promise.all([...document.images].map((i) => i.decode().catch(() => {}))));
+    await page.screenshot({ path: `${OUT}/15-edge-catalogo.png` });
+  }
 
   // Filtro por botones
   await page.locator('.filtros-botones button', { hasText: 'RPG' }).click();
