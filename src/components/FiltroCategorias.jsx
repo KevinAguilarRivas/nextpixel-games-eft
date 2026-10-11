@@ -7,10 +7,11 @@
    Props:
    - categorias: objeto { id: nombre }
    - conteos: cantidad de juegos por categoría { id: número, todas: número }
+   - mostrarConteos: false mientras el catálogo se está cargando
    - categoriaActiva, onCambiarCategoria
    - busqueda, onCambiarBusqueda
    ========================================================= */
-function FiltroCategorias({ categorias, conteos, categoriaActiva, onCambiarCategoria, busqueda, onCambiarBusqueda }) {
+function FiltroCategorias({ categorias, conteos, mostrarConteos, categoriaActiva, onCambiarCategoria, busqueda, onCambiarBusqueda }) {
   const opciones = [['todas', 'Todas'], ...Object.entries(categorias)];
 
   return (
@@ -27,7 +28,8 @@ function FiltroCategorias({ categorias, conteos, categoriaActiva, onCambiarCateg
               aria-pressed={activa}
               onClick={() => onCambiarCategoria(id)}
             >
-              {nombre} <span className="badge text-bg-dark ms-1">{conteos[id] ?? 0}</span>
+              {nombre}
+              {mostrarConteos && <span className="badge text-bg-dark ms-1">{conteos[id] ?? 0}</span>}
             </button>
           );
         })}
@@ -45,7 +47,7 @@ function FiltroCategorias({ categorias, conteos, categoriaActiva, onCambiarCateg
           >
             {opciones.map(([id, nombre]) => (
               <option key={id} value={id}>
-                {nombre} ({conteos[id] ?? 0})
+                {mostrarConteos ? `${nombre} (${conteos[id] ?? 0})` : nombre}
               </option>
             ))}
           </select>

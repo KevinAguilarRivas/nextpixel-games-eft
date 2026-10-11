@@ -3,8 +3,9 @@
    accesos directos al catálogo y al contacto.
    Props:
    - totalJuegos: cantidad de videojuegos disponibles
+   - cargando: true mientras se obtiene el catálogo
    ========================================================= */
-function Hero({ totalJuegos }) {
+function Hero({ totalJuegos, cargando }) {
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-titulo">
       <div className="container">
@@ -27,7 +28,8 @@ function Hero({ totalJuegos }) {
           {/* Lista de beneficios organizada con CSS Grid */}
           <ul className="hero-stats list-unstyled mb-0">
             <li>
-              <strong>{totalJuegos}</strong>
+              {/* Mientras carga el catálogo no se muestra un "0" engañoso */}
+              <strong>{cargando ? '…' : totalJuegos}</strong>
               <span>juegos disponibles</span>
             </li>
             <li>

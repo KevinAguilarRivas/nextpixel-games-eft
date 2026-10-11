@@ -74,7 +74,7 @@ function App() {
       <Navbar categorias={categorias} onSeleccionarCategoria={irACategoria} />
 
       <main>
-        <Hero totalJuegos={videojuegos.length} />
+        <Hero totalJuegos={videojuegos.length} cargando={cargando} />
 
         <section className="section" id="catalogo" aria-labelledby="catalogo-titulo">
           <div className="container">
@@ -86,6 +86,7 @@ function App() {
             <FiltroCategorias
               categorias={categorias}
               conteos={conteos}
+              mostrarConteos={!cargando}
               categoriaActiva={categoriaActiva}
               onCambiarCategoria={setCategoriaActiva}
               busqueda={busqueda}

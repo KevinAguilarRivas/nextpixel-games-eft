@@ -103,6 +103,15 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   color: var(--np-white);
 }
 
+.site-navbar .dropdown-menu {
+  --bs-dropdown-bg: var(--np-surface);
+  --bs-dropdown-border-color: var(--np-border);
+  --bs-dropdown-link-color: var(--np-muted);
+  --bs-dropdown-link-hover-bg: var(--np-surface-alt);
+  --bs-dropdown-link-hover-color: var(--np-white);
+  --bs-dropdown-divider-bg: var(--np-border);
+}
+
 .logo-mark {
   display: inline-grid;
   place-items: center;
@@ -436,16 +445,13 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 
   .game-cover {
     grid-row: 1 / span 2;
-    aspect-ratio: auto;
-    min-height: 100%;
+    align-self: start; /* mantiene la proporción 4:5 sin recortar el título de la portada */
   }
 
   .game-badge {
-    top: auto;
-    bottom: 0.5rem;
-    left: 0.5rem;
-    right: auto;
-    font-size: 0.7rem;
+    top: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.68rem;
   }
 
   .game-card .card-body {
