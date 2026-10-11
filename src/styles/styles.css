@@ -324,7 +324,37 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   color: var(--np-white);
 }
 
-/* -------------------- 6. Footer -------------------- */
+.game-actions {
+  background-color: transparent;
+  border-top: 1px solid var(--np-border);
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+/* -------------------- 6. Paneles y formularios -------------------- */
+.panel-card {
+  background-color: var(--np-surface);
+  border: 1px solid var(--np-border);
+  border-radius: var(--np-radius);
+}
+
+.panel-card .list-group-item {
+  background-color: transparent;
+  border-color: var(--np-border);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.toast-container {
+  z-index: 1090;
+}
+
+/* -------------------- 7. Footer -------------------- */
 .site-footer {
   background-color: #0d0717;
   border-top: 1px solid var(--np-border);

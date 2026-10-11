@@ -3,7 +3,9 @@ import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import FiltroCategorias from './components/FiltroCategorias.jsx';
 import ListaVideojuegos from './components/ListaVideojuegos.jsx';
+import PanelAdministracion from './components/PanelAdministracion.jsx';
 import Footer from './components/Footer.jsx';
+import Notificacion from './components/Notificacion.jsx';
 import { useVideojuegos } from './hooks/useVideojuegos.js';
 import { obtenerCategorias } from './services/api.js';
 
@@ -16,7 +18,7 @@ const categorias = obtenerCategorias();
    ========================================================= */
 function App() {
   // Estado del catálogo: se carga con useEffect dentro del hook
-  const { videojuegos, cargando, error, recargar } = useVideojuegos();
+  const { videojuegos, cargando, error, recargar, agregar, eliminar } = useVideojuegos();
 
   // Estado de los filtros (lo comparten Navbar, FiltroCategorias y ListaVideojuegos)
   const [categoriaActiva, setCategoriaActiva] = useState('todas');
@@ -35,6 +37,30 @@ function App() {
     (acc, juego) => ({ ...acc, [juego.categoria]: (acc[juego.categoria] ?? 0) + 1 }),
     { todas: videojuegos.length }
   );
+
+  // Aviso (toast) que confirma las acciones del usuario
+  const [aviso, setAviso] = useState(null);
+  const notificar = (mensaje, tipo = 'success') => setAviso({ id: Date.now(), mensaje, tipo });
+
+  const agregarVideojuego = (datos) => {
+    agregar(datos);
+    // Muestra el juego nuevo aunque haya un filtro activo
+    setCategoriaActiva('todas');
+    setBusqueda('');
+    notificar(`“${datos.nombre}” se agregó al catálogo.`);
+  };
+
+  const eliminarVideojuego = (juego) => {
+    eliminar(juego.id);
+    notificar(`“${juego.nombre}” se eliminó del catálogo.`, 'danger');
+  };
+
+  const restaurarCatalogo = () => {
+    recargar();
+    setCategoriaActiva('todas');
+    setBusqueda('');
+    notificar('Se restauró el catálogo original.', 'info');
+  };
 
   // Desde el menú de la Navbar: filtra y lleva al usuario al catálogo
   const irACategoria = (categoriaId) => {
@@ -71,12 +97,22 @@ function App() {
               cargando={cargando}
               error={error}
               onReintentar={recargar}
+              onEliminar={eliminarVideojuego}
             />
           </div>
         </section>
+
+        <PanelAdministracion
+          categorias={categorias}
+          videojuegos={videojuegos}
+          onAgregar={agregarVideojuego}
+          onRestaurar={restaurarCatalogo}
+        />
       </main>
 
       <Footer />
+
+      <Notificacion aviso={aviso} onCerrar={() => setAviso(null)} />
     </>
   );
 }

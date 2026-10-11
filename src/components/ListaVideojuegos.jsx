@@ -9,8 +9,9 @@ import TarjetaVideojuego from './TarjetaVideojuego.jsx';
    - videojuegos: lista (ya filtrada) a mostrar
    - categorias: objeto { id: nombre }
    - cargando, error, onReintentar: estado de la carga
+   - onEliminar: se pasa a cada tarjeta para quitar un juego
    ========================================================= */
-function ListaVideojuegos({ videojuegos, categorias, cargando, error, onReintentar }) {
+function ListaVideojuegos({ videojuegos, categorias, cargando, error, onReintentar, onEliminar }) {
   if (cargando) {
     return (
       <div className="estado-catalogo" role="status">
@@ -49,7 +50,11 @@ function ListaVideojuegos({ videojuegos, categorias, cargando, error, onReintent
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
         {videojuegos.map((juego) => (
           <div className="col" key={juego.id}>
-            <TarjetaVideojuego juego={juego} nombreCategoria={categorias[juego.categoria] ?? juego.categoria} />
+            <TarjetaVideojuego
+              juego={juego}
+              nombreCategoria={categorias[juego.categoria] ?? juego.categoria}
+              onEliminar={onEliminar}
+            />
           </div>
         ))}
       </div>
