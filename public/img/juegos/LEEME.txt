@@ -1,0 +1,24 @@
+Imágenes de los videojuegos
+===========================
+
+Copia aquí la imagen de cada juego con estos nombres exactos.
+Mientras una imagen no exista, su tarjeta muestra el espacio vacío.
+
+  elden-ring.jpg
+  baldurs-gate-3.jpg
+  the-witcher-3.jpg
+  god-of-war-ragnarok.jpg
+  spider-man-2.jpg
+  zelda-totk.jpg
+  hollow-knight.jpg
+  ea-sports-fc-26.jpg
+  nba-2k26.jpg
+  forza-horizon-5.jpg
+  gran-turismo-7.jpg
+  age-of-empires-4.jpg
+
+Formato recomendado: vertical, proporción 4:5 (por ejemplo 400 x 500 px).
+Si tu imagen tiene otra proporción se recorta al centro para llenar el espacio.
+
+Para usar otro nombre o formato (.png, .webp), cambia el campo "imagen"
+del juego en src/data/videojuegos.js.

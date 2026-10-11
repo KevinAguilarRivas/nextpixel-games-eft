@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="EA SPORTS FC 26">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#04201a"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
-<linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></linearGradient></defs>
-<rect width="400" height="500" fill="url(#g)"/>
-<g opacity=".08" stroke="#fff"><line x1="-200" y1="0" x2="300" y2="500"/><line x1="-160" y1="0" x2="340" y2="500"/><line x1="-120" y1="0" x2="380" y2="500"/><line x1="-80" y1="0" x2="420" y2="500"/><line x1="-40" y1="0" x2="460" y2="500"/><line x1="0" y1="0" x2="500" y2="500"/><line x1="40" y1="0" x2="540" y2="500"/><line x1="80" y1="0" x2="580" y2="500"/><line x1="120" y1="0" x2="620" y2="500"/><line x1="160" y1="0" x2="660" y2="500"/><line x1="200" y1="0" x2="700" y2="500"/><line x1="240" y1="0" x2="740" y2="500"/></g>
-<circle cx="200" cy="190" r="90" fill="#f8fafc" opacity=".92"/><polygon points="200,155 233,179 220,218 180,218 167,179" fill="#0f172a"/><g stroke="#0f172a" stroke-width="4"><line x1="200" y1="155" x2="200" y2="102"/><line x1="233" y1="179" x2="283" y2="163"/><line x1="220" y1="218" x2="252" y2="262"/><line x1="180" y1="218" x2="148" y2="262"/><line x1="167" y1="179" x2="117" y2="163"/></g>
-<rect width="400" height="500" fill="url(#s)"/>
-<text x="200" y="370" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">EA SPORTS</text><text x="200" y="414" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">FC 26</text>
-</svg>

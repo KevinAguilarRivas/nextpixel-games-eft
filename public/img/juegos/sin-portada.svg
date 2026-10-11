@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="SIN PORTADA">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#120a1f"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
-<linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></linearGradient></defs>
-<rect width="400" height="500" fill="url(#g)"/>
-<g opacity=".08" stroke="#fff"><line x1="-200" y1="0" x2="300" y2="500"/><line x1="-160" y1="0" x2="340" y2="500"/><line x1="-120" y1="0" x2="380" y2="500"/><line x1="-80" y1="0" x2="420" y2="500"/><line x1="-40" y1="0" x2="460" y2="500"/><line x1="0" y1="0" x2="500" y2="500"/><line x1="40" y1="0" x2="540" y2="500"/><line x1="80" y1="0" x2="580" y2="500"/><line x1="120" y1="0" x2="620" y2="500"/><line x1="160" y1="0" x2="660" y2="500"/><line x1="200" y1="0" x2="700" y2="500"/><line x1="240" y1="0" x2="740" y2="500"/></g>
-<rect x="105" y="140" width="190" height="100" rx="50" fill="none" stroke="#e879f9" stroke-width="7"/><g fill="#e879f9"><rect x="140" y="182" width="36" height="12"/><rect x="152" y="170" width="12" height="36"/><circle cx="245" cy="175" r="9"/><circle cx="265" cy="198" r="9"/></g>
-<rect width="400" height="500" fill="url(#s)"/>
-<text x="200" y="370" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">SIN</text><text x="200" y="414" text-anchor="middle" font-family="Arial Black,Segoe UI,Arial,sans-serif" font-weight="900" font-size="38" fill="#ffffff" letter-spacing="1">PORTADA</text>
-</svg>

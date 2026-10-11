@@ -98,7 +98,7 @@ function FormularioVideojuego({ categorias, nombresExistentes, onAgregar }) {
             tipo="url"
             label="URL de la portada (opcional)"
             placeholder="https://…"
-            ayuda="Si lo dejas vacío se usará una portada genérica."
+            ayuda="Si lo dejas vacío, la tarjeta queda con el espacio de la imagen vacío."
             className="col-12"
           />
         </div>

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { IMAGEN_POR_DEFECTO } from '../data/videojuegos.js';
 import { formatearPrecio, urlPublica } from '../utils/format.js';
 
 /* =========================================================
@@ -14,22 +13,25 @@ function TarjetaVideojuego({ juego, nombreCategoria, onEliminar }) {
   // Estado local: pide confirmación antes de eliminar
   const [confirmando, setConfirmando] = useState(false);
 
-  // Si la imagen no existe o falla, se reemplaza por la portada por defecto
-  const usarImagenPorDefecto = (event) => {
-    event.currentTarget.onerror = null;
-    event.currentTarget.src = urlPublica(IMAGEN_POR_DEFECTO);
-  };
+  // Estado local: true si la imagen no existe o no se pudo cargar
+  const [imagenFallo, setImagenFallo] = useState(false);
+  const mostrarImagen = Boolean(juego.imagen) && !imagenFallo;
 
   return (
     <article className="card game-card h-100">
       <div className="game-cover">
-        <img
-          src={urlPublica(juego.imagen || IMAGEN_POR_DEFECTO)}
-          className="card-img-top"
-          alt={`Portada de ${juego.nombre}`}
-          loading="lazy"
-          onError={usarImagenPorDefecto}
-        />
+        {/* Renderizado condicional: imagen del juego o espacio vacío reservado para ella */}
+        {mostrarImagen ? (
+          <img
+            src={urlPublica(juego.imagen)}
+            className="card-img-top"
+            alt={`Portada de ${juego.nombre}`}
+            loading="lazy"
+            onError={() => setImagenFallo(true)}
+          />
+        ) : (
+          <div className="game-cover-vacia" role="img" aria-label={`${juego.nombre} (sin imagen)`}></div>
+        )}
         <span className="badge game-badge">{nombreCategoria}</span>
       </div>
 
