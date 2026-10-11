@@ -75,6 +75,16 @@ Otros comandos disponibles:
 > dentro de la carpeta descomprimida y ejecutar los pasos 2 y 3. La carpeta `node_modules` no se incluye en el
 > `.zip` porque `npm install` la vuelve a generar. También se incluye `dist/`, la versión ya compilada.
 
+### Imágenes de los videojuegos
+
+Cada juego tiene en `src/data/videojuegos.js` un campo `imagen` con la ruta de su portada, por ejemplo
+`img/juegos/elden-ring.jpg`. Basta con copiar la imagen en `public/img/juegos/` con ese nombre
+(la lista completa está en `public/img/juegos/LEEME.txt`). Se recomienda formato vertical 4:5 (ej: 400 × 500 px).
+
+Si la imagen todavía no existe, la tarjeta muestra el espacio de la portada vacío (la tarjeta detecta el error de
+carga con `onError` y cambia a ese espacio usando renderizado condicional). Al agregar un juego desde el formulario
+se puede indicar la URL de una imagen o dejarla vacía.
+
 ## Cómo usar el sitio
 
 1. **Inicio:** la portada muestra la cantidad de juegos disponibles y accesos al catálogo y al contacto.
@@ -102,7 +112,7 @@ nextpixel-games-eft/
 ├── public/
 │   └── img/
 │       ├── helmet.png            # logo
-│       └── juegos/               # portadas SVG de los videojuegos
+│       └── juegos/               # imágenes de los videojuegos (ver LEEME.txt)
 ├── src/
 │   ├── data/
 │   │   └── videojuegos.js        # OBJETO JS con categorías y videojuegos
@@ -237,7 +247,7 @@ Resultado de la última ejecución: **44/44 pruebas OK** (22 en Chrome + 22 en E
 | Verificación | Chrome | Edge |
 |---|:---:|:---:|
 | Muestra el estado “Cargando videojuegos…” | ✅ | ✅ |
-| Genera las 12 tarjetas desde el objeto JS y cargan todas las portadas | ✅ | ✅ |
+| Genera las 12 tarjetas desde el objeto JS, cada una con su espacio para la imagen | ✅ | ✅ |
 | Filtro por categoría con botones (RPG → 3 juegos) | ✅ | ✅ |
 | Filtro desde el dropdown de la Navbar (Carreras → 2 juegos) | ✅ | ✅ |
 | Búsqueda por nombre y mensaje “sin resultados” | ✅ | ✅ |
@@ -260,8 +270,8 @@ ven igual que en los navegadores basados en Chromium.
 - El Hero y los filtros mostraban “0 juegos” mientras cargaba el catálogo → ahora muestran “…” y ocultan los
   contadores hasta que llegan los datos.
 - En móvil las tarjetas medían ~700px de alto → se cambiaron a formato horizontal con CSS Grid (~240px).
-- En móvil la portada se recortaba y el badge tapaba el título → la portada mantiene su proporción 4:5 y el badge
-  se ubica arriba.
+- En móvil la imagen se recortaba y el badge tapaba parte de ella → el espacio de la imagen mantiene su proporción
+  4:5 y el badge se ubica arriba.
 - Ids repetidos entre los dos formularios (ambos tenían un campo “nombre”) → cada formulario usa un prefijo
   (`juego-` y `contacto-`).
 
@@ -296,5 +306,4 @@ Esto compila el proyecto y publica la carpeta `dist/` en la rama `gh-pages`. En 
 
 ---
 
-Las portadas de los videojuegos son ilustraciones SVG originales creadas para este proyecto (no usan arte oficial).
 Los nombres de los videojuegos pertenecen a sus respectivos dueños y se usan solo con fines académicos.
