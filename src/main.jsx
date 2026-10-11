@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-// Bootstrap 5: primero sus estilos y su JS (navbar colapsable, toasts),
+// Bootstrap 5: primero sus estilos y su JS (navbar colapsable, dropdown, offcanvas),
 // después nuestros estilos para poder personalizarlo
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap';
 import './styles/styles.css';
 
 import App from './App.jsx';

@@ -1,1 +1,276 @@
-/* NextPixel Games — estilos personalizados sobre Bootstrap 5 */
+/* =========================================================
+   NextPixel Games — styles.css
+   Estilos personalizados sobre Bootstrap 5 (tema oscuro).
+   Se reutilizan los colores y fuentes de NextPixel (semanas 3–8).
+   Bootstrap se encarga de la grilla y los componentes;
+   aquí se definen la identidad visual y los layouts propios
+   con Flexbox y CSS Grid.
+   ========================================================= */
+
+/* -------------------- 1. Variables -------------------- */
+:root {
+  --np-bg: #120a1f;
+  --np-bg-alt: #180e2b;
+  --np-surface: #211236;
+  --np-surface-alt: #2a1743;
+  --np-border: rgba(232, 121, 249, 0.18);
+
+  --np-primary: #8b5cf6;
+  --np-primary-dark: #6d28d9;
+  --np-accent: #e879f9;
+  --np-cyan: #22d3ee;
+
+  --np-white: #f8f5ff;
+  --np-muted: #b8a9d9;
+
+  --np-gradient-hero: linear-gradient(135deg, #170b30 0%, #4c1d95 45%, #9333ea 75%, #22d3ee 160%);
+  --np-gradient-accent: linear-gradient(120deg, var(--np-accent), var(--np-primary));
+
+  --np-font-display: "Orbitron", "Segoe UI", sans-serif;
+  --np-font-body: "Rajdhani", "Segoe UI", sans-serif;
+
+  --np-radius: 16px;
+  --np-shadow-glow: 0 20px 50px rgba(139, 92, 246, 0.35);
+}
+
+/* Personalización de las variables de Bootstrap en modo oscuro */
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--np-bg);
+  --bs-body-color: var(--np-white);
+  --bs-secondary-color: var(--np-muted);
+  --bs-border-color: var(--np-border);
+  --bs-tertiary-bg: var(--np-surface);
+  --bs-link-color: var(--np-accent);
+  --bs-link-hover-color: #f5d0fe;
+  --bs-body-font-family: var(--np-font-body);
+  --bs-body-font-size: 1.08rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px; /* compensa la navbar fija al navegar por anclas */
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+  font-family: var(--np-font-display);
+  letter-spacing: 0.01em;
+}
+
+/* Botones de Bootstrap con los colores de la marca */
+.btn-primary {
+  --bs-btn-bg: var(--np-primary);
+  --bs-btn-border-color: var(--np-primary);
+  --bs-btn-hover-bg: var(--np-primary-dark);
+  --bs-btn-hover-border-color: var(--np-primary-dark);
+  --bs-btn-active-bg: var(--np-primary-dark);
+  --bs-btn-active-border-color: var(--np-primary-dark);
+  --bs-btn-disabled-bg: var(--np-primary);
+  --bs-btn-disabled-border-color: var(--np-primary);
+  font-weight: 700;
+}
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.form-control,
+.form-select {
+  background-color: var(--np-bg-alt);
+  border-color: var(--np-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--np-primary);
+  box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.3);
+}
+
+/* -------------------- 2. Navbar -------------------- */
+.site-navbar {
+  background-color: rgba(18, 10, 31, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--np-border);
+}
+
+.site-navbar .nav-link {
+  font-weight: 600;
+  color: var(--np-muted);
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus-visible {
+  color: var(--np-white);
+}
+
+.logo-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--np-gradient-accent);
+}
+
+.logo-text {
+  font-family: var(--np-font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--np-white);
+}
+
+.logo-text em {
+  font-style: normal;
+  color: var(--np-accent);
+}
+
+/* -------------------- 3. Hero (CSS Grid) -------------------- */
+.hero {
+  background: var(--np-gradient-hero);
+  padding: 4.5rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #a5f3fc;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  display: block;
+  background: linear-gradient(120deg, #f5d0fe, #a5f3fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  color: #e9e2ff;
+  max-width: 52ch;
+  margin-bottom: 1.75rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.hero-stats li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: var(--np-radius);
+  background: rgba(18, 10, 31, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-stats strong {
+  font-family: var(--np-font-display);
+  font-size: 1.8rem;
+  color: var(--np-white);
+}
+
+.hero-stats span {
+  color: #e9e2ff;
+}
+
+/* -------------------- 4. Secciones -------------------- */
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background-color: var(--np-bg-alt);
+  border-top: 1px solid var(--np-border);
+  border-bottom: 1px solid var(--np-border);
+}
+
+.section-head {
+  margin-bottom: 2rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.4rem;
+}
+
+.section-head p {
+  color: var(--np-muted);
+  margin-bottom: 0;
+}
+
+/* -------------------- 5. Footer -------------------- */
+.site-footer {
+  background-color: #0d0717;
+  border-top: 1px solid var(--np-border);
+  color: var(--np-muted);
+}
+
+.site-footer a {
+  color: var(--np-muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--np-white);
+}
+
+.site-footer .logo-text {
+  color: var(--np-white);
+}
+
+.footer-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--np-white);
+  margin-bottom: 0.75rem;
+}
+
+.site-footer address {
+  font-style: normal;
+}
+
+/* -------------------- Responsivo -------------------- */
+@media (max-width: 991.98px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .site-navbar .navbar-collapse {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero-stats strong {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
