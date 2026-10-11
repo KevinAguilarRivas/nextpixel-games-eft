@@ -232,6 +232,38 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   border-radius: var(--np-radius);
 }
 
+/* Filtros: Flexbox para los botones, CSS Grid para los campos */
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filtros-botones {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtros-botones .btn-outline-secondary {
+  --bs-btn-color: var(--np-muted);
+  --bs-btn-border-color: var(--np-border);
+  --bs-btn-hover-bg: var(--np-surface-alt);
+  --bs-btn-hover-border-color: var(--np-accent);
+  --bs-btn-hover-color: var(--np-white);
+}
+
+.filtros-campos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .filtros-campos {
+    grid-template-columns: minmax(260px, 420px);
+  }
+}
+
 .catalogo-conteo {
   color: var(--np-muted);
   font-weight: 600;
