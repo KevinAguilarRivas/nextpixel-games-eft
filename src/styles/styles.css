@@ -350,6 +350,33 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   font-weight: 600;
 }
 
+/* Contacto: CSS Grid con la información a la izquierda y el formulario a la derecha */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 2fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.contacto-info dt {
+  color: var(--np-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contacto-info dd {
+  color: var(--np-muted);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .toast-container {
   z-index: 1090;
 }

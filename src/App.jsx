@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx';
 import FiltroCategorias from './components/FiltroCategorias.jsx';
 import ListaVideojuegos from './components/ListaVideojuegos.jsx';
 import PanelAdministracion from './components/PanelAdministracion.jsx';
+import Contacto from './components/Contacto.jsx';
 import Footer from './components/Footer.jsx';
 import Notificacion from './components/Notificacion.jsx';
 import { useVideojuegos } from './hooks/useVideojuegos.js';
@@ -108,6 +109,8 @@ function App() {
           onAgregar={agregarVideojuego}
           onRestaurar={restaurarCatalogo}
         />
+
+        <Contacto onEnviado={(datos) => notificar(`Mensaje enviado. Te responderemos a ${datos.email.trim()}.`)} />
       </main>
 
       <Footer />
